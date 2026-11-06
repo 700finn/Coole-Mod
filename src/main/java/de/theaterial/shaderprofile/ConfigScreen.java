@@ -1,6 +1,6 @@
 package de.theaterial.shaderprofile;
 
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.StringWidget;
@@ -27,14 +27,14 @@ public class ConfigScreen extends Screen {
         int x = this.width / 2 - w / 2;
         int y = this.height / 2 - 70;
 
-        addRenderableWidget(new StringWidget(x, y - 20, w, 12, Component.literal("Shader Profile"), this.font).alignCenter());
+        addRenderableWidget(new StringWidget(x, y - 20, w, 12, Component.literal("Shader Profile"), this.font));
 
         addRenderableWidget(new IntSlider(x, y, w, 20, "Render Distance", 2, 64, cfg.renderDistance,
                 v -> cfg.renderDistance = v));
         addRenderableWidget(new IntSlider(x, y + 24, w, 20, "Simulation Distance", 5, 32, cfg.simulationDistance,
                 v -> cfg.simulationDistance = v));
 
-        packLabel = new StringWidget(x, y + 54, w, 12, packText(cfg), this.font).alignCenter();
+        packLabel = new StringWidget(x, y + 54, w, 12, packText(cfg), this.font);
         addRenderableWidget(packLabel);
 
         addRenderableWidget(Button.builder(Component.literal("Texturepack hochladen (.zip)"), b -> pickPack())
