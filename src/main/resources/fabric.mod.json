@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "shaderprofile",
+  "version": "${version}",
+  "name": "Shader Profile",
+  "description": "Per Tastendruck Shader, Render Distance, Simulation Distance und Texturepack umschalten.",
+  "authors": ["TheAterial"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.theaterial.shaderprofile.ShaderProfileClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "iris": "*"
+  }
+}
